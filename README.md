@@ -1,5 +1,19 @@
 # PCOS Management
 
+## Home page
+
+![PCOS Management home page - assessment](images/home-page-1.png)
+
+![PCOS Management home page - PCOS information](images/home-page-2.png)
+
+![PCOS Management home page - lifestyle guidance](images/home-page-3.png)
+
+![PCOS Management home page - symptoms and support](images/home-page-4.png)
+
+![PCOS Management home page - wellness resources](images/home-page-5.png)
+
+![PCOS Management home page - final section](images/home-page-6.png)
+
 ## Run locally
 
 Requires Node.js 22.5 or newer (Node 24 is installed on this machine).
