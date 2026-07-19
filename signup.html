@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>PCOS Management</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="image-section">
+            <img src="images/ovary.png" class="slide active">
+            <img src="images/analysis.png" class="slide">
+            <img src="images/mood.png" class="slide" >
+            <img src="images/lifestyle.png" class="slide">
+            <div class="slide-dots">
+                 <span class="dot active"></span>
+                <span class="dot"></span>
+                 <span class="dot"></span>
+                     <span class="dot"></span>
+            </div>
+        </div>
+
+        <form class="form-section" id="signup-form" novalidate>
+            <h1>Create an account</h1>
+            <h5>Already have an account? <a href="login.html" id="log-in">Log in</a></h5>
+
+            <div class="name-row">
+                <input type="text" placeholder="First name" class="input s-input" name="firstName" autocomplete="given-name" required>
+                <input type="text" placeholder="Last name" class="input s-input" name="lastName" autocomplete="family-name" required>
+            </div>
+
+            <input type="email" placeholder="Email" class="input l-input" name="email" autocomplete="email" required>
+     
+
+            <input type="password" placeholder="Enter your password (8+ characters)" class="input l-input" name="password" autocomplete="new-password" minlength="8" required>
+
+            <div class="terms">
+               
+                <p style="font-size: x-small;" >
+                    <input type="checkbox" id="terms_conditions" name="terms">
+
+                    <label for="terms_conditions">
+                        By continuing you agree to our <a href="terms.html" id="terms-and-conditions">Terms and Conditions</a> and
+                        <a href="privacy.html" id="privacy-policy">Privacy Policy</a>
+                    </label>
+                </p>
+                
+            </div>
+
+            <p id="auth-message" class="auth-message" role="alert" hidden></p>
+            <button type="submit" class="input l-input btn-primary" name="create-acc">Create account</button>
+
+            <div class="divider">
+                <hr><span>Or register with</span><hr>
+            </div>
+
+            <div class="signup-with">
+                <a href="/api/oauth/google/start" class="input s-input oauth-button">
+                    <img src="images/icons/google.png" >
+                    <span>Google</span>
+                </a>
+                <a href="/api/oauth/twitter/start" class="input s-input oauth-button"><span>Twitter / X</span></a>
+            </div>
+            
+
+        </form>
+
+    </div>
+    
+    <script src="slideshow.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upload PCOS reports for a detailed wellness plan">
+  <title>Upload your PCOS reports</title>
+  <link rel="stylesheet" href="report-plan.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="home.html">← Back to assessment</a>
+    <section class="hero">
+      <p class="eyebrow">REPORT-BASED PCOS PLAN</p>
+      <h1>Upload your reports. We’ll take it from there.</h1>
+      <p>Add the files you received from the lab and your ultrasound centre, then enter only your height and weight for a more useful food-portion and workout plan.</p>
+    </section>
+
+    <section class="privacy-note"><span aria-hidden="true">⌁</span><div><strong>Your reports stay private.</strong><br>Files are selected only for this report-review flow and are not shown anywhere else in the app.</div></section>
+
+    <form id="report-form" novalidate>
+      <section class="card">
+        <div class="section-heading"><div><p class="step">01</p><h2>Blood reports</h2></div><p class="muted">PDF, JPG or PNG</p></div>
+        <p class="form-intro">Please make sure the report includes the tests your doctor prescribed. One combined lab PDF is perfect.</p>
+        <div class="required-tests"><strong>Blood report should include</strong><span>Free testosterone · Total testosterone · TSH · Serum prolactin · Fasting insulin · Fasting blood glucose · HbA1c · AMH · LH · FSH · E2 / Estradiol · Vitamin B12 · Vitamin D3 · Lipid profile</span></div>
+        <label class="upload-zone" for="blood-file">
+          <input id="blood-file" type="file" accept=".pdf,image/jpeg,image/png" required>
+          <span class="upload-icon">↑</span>
+          <strong>Upload blood report</strong>
+          <small id="blood-file-name">Choose a PDF or image</small>
+        </label>
+      </section>
+
+      <section class="card">
+        <div class="section-heading"><div><p class="step">02</p><h2>USG pelvis and abdomen</h2></div><p class="muted">PDF, JPG or PNG</p></div>
+        <p class="form-intro">Upload the USG report prescribed by your doctor. If included, it may contain AFC, ovarian volume, stroma, and the radiologist’s impression.</p>
+        <label class="upload-zone" for="usg-file">
+          <input id="usg-file" type="file" accept=".pdf,image/jpeg,image/png">
+          <span class="upload-icon">↑</span>
+          <strong>Upload USG report</strong>
+          <small id="usg-file-name">Choose a PDF or image</small>
+        </label>
+        <p class="optional-note">USG is optional if you are still waiting for the report. You can add it later.</p>
+      </section>
+
+      <section class="card">
+        <div class="section-heading"><div><p class="step">03</p><h2>Your starting details</h2></div><p class="muted">Two quick details</p></div>
+        <p class="form-intro">This lets us make the food quantities and workout volume more relevant to you. You do not need to type any lab values.</p>
+        <div class="starting-details">
+          <label>Height (cm)<input id="height" type="number" min="120" max="220" placeholder="e.g. 162" required></label>
+          <label>Weight (kg)<input id="weight" type="number" min="30" max="250" step="0.1" placeholder="e.g. 62" required></label>
+        </div>
+      </section>
+
+      <p id="form-error" class="form-error" aria-live="polite"></p>
+      <button class="primary" type="submit">Continue to my detailed plan <span>→</span></button>
+    </form>
+    <p class="care">For education and wellness planning only. Consult your clinician for interpretation, treatment decisions, supplements, medication changes, fertility concerns, severe symptoms, or periods absent for 90 days.</p>
+  </main>
+  <script src="report-plan.js"></script>
+</body>
+</html>

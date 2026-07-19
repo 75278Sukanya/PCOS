@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>PCOS Management</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="images/ovary.png" class="slide active">
+            <img src="images/analysis.png" class="slide">
+            <img src="images/mood.png" class="slide" >
+            <img src="images/lifestyle.png" class="slide">
+             <div class="slide-dots">
+                 <span class="dot active"></span>
+                <span class="dot"></span>
+                 <span class="dot"></span>
+                     <span class="dot"></span>
+            </div>
+        </div> 
+        <form class="form-section" id="login-form" novalidate>
+            <h1>Welcome Back!</h1>
+            <p style="font-size: x-small;">Enter your email and password to access your account</p>
+           
+            <input type="email" placeholder="Email" class="input" name="email" autocomplete="email" required>
+            <input type="password" placeholder="Password" class="input" name="password" autocomplete="current-password" required>
+            
+            <div class="remember-me">
+                <div class="remember-check">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div>
+                <span id="forgot-password"><a>Forgot Password?</a></span>
+            </div>   
+            
+            <p id="auth-message" class="auth-message" role="alert" hidden></p>
+            <button type="submit" class="input button btn-1">Sign in</button>
+
+            <div class="divider">
+                <hr><span>Or Login With</span><hr>
+            </div>
+
+            <div class="signin-with">
+                <a href="/api/oauth/google/start" class="button btn-2 oauth-button">
+                    <img src="images/icons/google.png" >
+                    <span>Google</span>
+                </a>
+                <a href="/api/oauth/twitter/start" class="button btn-2 oauth-button"><span>Twitter / X</span></a>
+            </div>
+
+            <span style="font-size: x-small;">Don't have an account? <a href="signup.html" class="register-now" style="color: #993556;">Register Now.</a></span>
+        </form>
+    </div>
+    
+    <script src="slideshow.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+pcos-management.db
+pcos-management.db-shm
+pcos-management.db-wal
+.env

@@ -1,0 +1,213 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: rgb(255, 240, 245);
+  font-family: sans-serif;
+   color:#993556;
+}
+
+.container {
+  display:flex;
+  width: 100%;
+   background-color: rgb(255, 220, 240);
+  overflow:hidden;
+    min-height: 100vh; 
+}
+.image-section {
+  flex:1;
+   position:relative;
+  overflow: hidden;
+    border-radius: 0 40px 40px 0; /* top-left top-right bottom-right bottom-left */
+  pointer-events: none;
+  
+}
+
+.image-section img {
+   position:absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    display: block;
+    object-position: 10% center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.image-section img.active{
+    opacity: 1;
+}
+
+.slide-dots{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    transition: background-color 0.3s ease;
+     pointer-events: all; /* but each dot does */
+    cursor: pointer;     /* shows hand cursor on hover too */
+}
+.dot.active{
+    background-color: #fff;
+}
+
+.form-section {
+ flex: 0.5;
+  padding: 40px;
+  display: flex;
+ flex-direction: column;
+ gap:15px;
+ justify-content: center;
+  
+}
+.form-section h1 {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .form-section {
+    padding: 20px;
+  }
+}
+
+
+.input{
+    background-color: rgb(246, 183, 216);
+    border: 2px solid transparent;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size:x-small;
+   box-sizing: border-box;
+}
+.s-input{
+     height: 35px;
+}
+.l-input{
+     height: 35px;
+     width: 290px;
+}
+.input:focus {
+    border: 1px solid rgb(218, 126, 173);
+}
+.input::placeholder {
+     color: rgb(184, 71, 129);
+}
+
+
+
+input[type="checkbox"]{
+  accent-color:#993556;
+  outline: none;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+    background-color: #993556;
+  color: white;
+  border: 2px solid transparent;
+  cursor: pointer;
+   text-align: center;
+}
+.btn-primary:hover {
+  background-color: #b6325e;
+}
+
+
+.terms p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+#terms-and-conditions, #privacy-policy,#log-in{
+  color:#993556;
+}
+#terms-and-conditions:hover, #privacy-policy:hover,#log-in:hover{
+ color:#d16388;
+}
+#terms-and-conditions:active, #privacy-policy:active,#log-in:active{
+color: blue;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #993556;
+}
+
+.divider span {
+  font-size: x-small;
+  color: #993556;
+}
+
+
+.name-row,
+.signup-with {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.name-row .input,
+.signup-with .input {
+  flex: 1;
+}
+
+input[type="email"],
+input[type="password"],
+button.btn-primary {
+  width: 100%;
+  box-sizing: border-box;
+}
+.signup-with button{
+  background-color:rgb(229, 122, 175);
+  border: 1px solid transparent;
+  color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.signup-with button:focus{
+border-color: rgb(241, 191, 216);
+}
+.signup-with button:hover{
+   background-color: rgb(240, 99, 170);
+}
+.signup-with img {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+.auth-message{width:100%;margin:4px 0 0;font-size:.78rem;color:#a1264d}.auth-message.success{color:#39713c}
+.oauth-button{text-decoration:none;color:black;display:flex;align-items:center;justify-content:center}

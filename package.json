@@ -1,0 +1,10 @@
+{
+  "name": "pcos-management",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PCOS Management website with SQLite-backed authentication",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}

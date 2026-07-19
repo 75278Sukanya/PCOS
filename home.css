@@ -1,0 +1,520 @@
+body{
+    padding-top: 80px;
+}
+nav{
+    top:0;
+    left:0;
+    display: flex;
+    margin: 0;
+    height:80px;
+    background-color: rgb(255, 240, 245);
+    border-bottom: 1px solid rgb(220, 140, 175);
+    align-items: center;
+    justify-content:space-around;
+   position: fixed;
+  width:100%;
+   z-index: 1000;
+}
+
+ul{
+    padding: 0;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    list-style: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #72243e;
+   
+}
+ul li a{
+    color: #72243e;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color:#bb6d87;
+    cursor: pointer;
+}
+#login-btn {
+    background-color:rgb(229, 122, 175);
+     /* background-color: rgb(163, 60, 237); */
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#login-btn:hover {
+    background-color: rgb(255, 135, 195);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    
+}
+
+.top-section,.section-2,.bottle-section,.symptoms-and-causes,.domino-effect,.treatment{
+    display: flex;
+    margin:10px;
+    border-radius: 16px; 
+    gap: 20px;
+    
+}
+.research,.about-us{
+    margin:10px;
+    border-radius: 16px; 
+}
+.top-section,.section-2,.bottle-section,.domino-effect,.research{
+  padding:50px;
+}
+.top-section,.bottle-section,.research{
+background-color: rgb(246, 183, 216);
+}
+
+
+.form-section{
+    /* margin-left:40px; */
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding-left: 30px;
+    padding-top: 20px;
+    z-index: 1;
+    position: relative;
+}
+.free-assessment {
+    font-size: 12px;
+    font-weight: 600;
+    color: #993556;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-heading {
+    font-size: 24px;
+    font-weight: 500;
+    color: #72243e;
+}
+.sub-heading {
+    font-size: 13px;
+    color: #993556;
+}
+#input-text{
+    display: flex;
+    gap:10px;
+    color:#72243e;
+}
+
+#input-text input{
+     width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #bc567b;
+}
+#input-text input:focus{
+    outline: none;
+    border: 2px solid #bc567b;;
+    
+}
+input[type="checkbox"]{
+  accent-color: #993556;
+  outline: none;
+  margin: 0;
+  flex-shrink: 0;
+}
+#input-check{
+    color:#72243e;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:small;
+   margin-top: 5px;
+   display: flex;
+   gap:80px;
+   
+}
+
+#skin,#hair,#period,#excess-hair, #weight-gain, #fatique{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    margin:5px;
+}
+
+#get-my-suggestion{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items:center;
+    margin-top: 20px;
+}
+
+#get-my-suggestion-btn,#create-acc-btn{
+    color: white;
+    border: none;
+    cursor: pointer;
+    
+}
+#get-my-suggestion-btn{
+    background-color: #993556;
+    height: 40px;
+    width: 220px;
+    font-size: 13px;
+    border-radius: 20px;
+}
+#create-acc-btn{
+      background-color:rgb(229, 122, 175);
+    height: 20px;
+    width: 150px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+.create-account {
+    font-size: 12px;
+    color: #993556;
+}
+
+.facts-section{
+  
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items:self-end;
+    justify-content:center;
+    flex:1;
+    overflow: hidden;
+}
+ .facts{
+    
+    height:70px;
+    width:85%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    
+}
+.facts, .form-section{
+background-color: rgb(255, 220, 240);
+border-radius: 40px;
+padding: 30px;
+}
+
+
+.facts p {
+    font-size: 15px;
+    color: #72243e;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+}
+.fact{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    
+}
+.fact.active{
+    opacity: 1;
+}
+.facts-1,.facts-2{
+    position: relative;
+
+}
+#section-2-{
+   background-image: url(images/border.png);
+   background-size:cover;
+  background-position: center; 
+  padding:80px;
+  background-repeat: no-repeat;
+}
+#what-is-pcos, #modern-problem{
+    background-color:rgb(210, 255, 165);
+    border-radius: 50px;
+    padding: 30px 40px;
+    color: rgb(45, 88, 2);
+   flex:1;
+
+}
+#what-is-pcos ul, #causes ul, #long-term-effects ul,.diet-and-sleep ul,.exercise-and-mental-health ul {
+    list-style: disc;        /* brings bullet points back */
+    padding-left: 20px;      /* adds indent for bullets */
+    margin: 10px 0;
+}
+
+#what-is-pcos ul li   {
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+
+#bottle-vdo{
+
+ width: 100%;
+    scale: 1;               /* zooms in to push black bars out */
+    object-fit:cover;
+    height: 100%;
+}
+#video-wrapper{
+   
+     overflow: hidden;         /* hides anything outside the box */
+    flex-shrink: 0;
+    flex:1;
+     border-radius:50px ;
+     /* align-items: center; */
+}
+#bottle-desc{
+    background-image: url(images/tulips.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+      background-position: center;
+     padding-right: 40px;
+     padding-left: 40px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     color: #3b2a2a;
+     font-family: Georgia ;
+     line-height: 1.9 ;
+     align-items: center;
+     flex:1;
+      border-radius:50px ;
+     
+}
+#bottle-desc p{
+     text-align: center;        /* centers text away from tulips */
+    padding: 0 60px; 
+}
+.domino-effect{
+    background-image: url(images/black-n-white-roses.png);
+   padding-top: 80px;
+   padding-left: 100px;
+   padding-right: 100px;
+   padding-bottom: 180px; 
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    background-position: center center;
+    justify-content: space-between;  
+    align-items: center;             
+}
+.domino-effect h4 {
+    font-size: 16px;            /* slightly smaller heading */
+    margin-bottom: 8px;
+}
+.domino-effect p {
+    font-size: 14px;            /* smaller text */
+    line-height: 1.2;           /* tighter line spacing */
+    margin-bottom: 8px;         /* less gap between paragraphs */
+}
+
+
+#symptoms-images-column1,#symptoms-images-column2{
+    display: flex;
+    flex-direction: column;
+   gap:20px;
+    justify-content: center;
+     width: 11%;                      /* fixed width for both image columns */
+    flex-shrink: 0;     
+}
+
+#symptoms-images-column1 img,#symptoms-images-column2 img{
+     width: 100%; 
+    border-radius: 20px;
+}
+.domino-effect > div:nth-child(2) {
+    width: auto;                     /* text column takes remaining space */
+}
+.symptoms-and-causes{
+    background-color: rgb(253, 245, 233);
+    justify-content:space-between;
+    padding: 20px;
+}
+
+#causes ul,#long-term-effects ul{
+    color: black;
+    font-weight:normal;
+    font-size: small;
+}
+
+#causes ul li, #long-term-effects ul li{
+     margin-bottom: 1px;
+    line-height: 1.3;
+}
+#causes span,#causes p,#long-term-effects p{
+    font-weight:700;
+}
+
+.column-2 img{
+    border-radius: 50px;
+}
+
+.treatment{
+    background-image: url(images/pink-roses.png);
+    justify-content: center;
+    align-items: stretch;
+   padding-top: 130px;
+   padding-left: 100px;
+   padding-right: 100px;
+   padding-bottom: 180px; 
+    background-size: cover;
+    display: flex;
+    background-position: center left;
+    font-size:small;
+    flex-wrap: wrap;          /* ← add this */
+
+    
+}
+.starting-line {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #72243e;
+    font-weight: 900;
+    font-size:medium;
+}
+
+.diet-and-sleep ul{
+color: green;
+}
+
+.diet-and-sleep,.exercise-and-mental-health{
+   
+    display: flex;
+    gap:20px;
+    flex: 1 1 0;       /* ← each takes equal share of the row */
+    min-width: 0;
+
+}
+.diet-and-sleep p,.exercise-and-mental-health p{
+font-weight: bold;
+text-align: center;
+margin-bottom:0;
+font-size: small;
+color:#993556;
+}
+.exercise-and-mental-health p{
+color:rgb(68, 124, 68);
+}
+
+#diet,#sleep,#mental-health,#exercise{
+    border-radius: 50px;
+    padding: 10px 10px 0 10px;
+    
+}
+#diet{
+    background-color:#e8fea9;
+    
+}
+#sleep{
+    background-color: #fec7da;
+}
+#mental-health{
+    background-color:rgb(200, 200, 255);
+}
+#exercise{
+    background-color:rgb(249, 238, 175)
+}
+#diet span{
+    background-color: rgb(60, 255, 53);
+   
+}
+
+
+
+#sleep span,#sleep button:hover{
+     background-color: #ff5a94;
+    
+}
+#mental-health span,#mental-health button:hover{
+     background-color:rgb(126, 126, 249);
+     
+}
+#exercise span{
+    background-color:rgb(187, 160, 2)
+    
+}
+#mental-health button,#sleep button{
+    border-radius: 20px;
+    border: none;
+    font-size:smaller;
+   font-weight: bold;
+   padding: 10px;
+    display: block;
+   
+}
+
+#mental-health button{
+   background-color:rgb(62, 62, 254);
+   color:rgb(207, 207, 255);
+     margin:95px auto 0px auto;
+    }
+#sleep button{
+    background-color: #fd075d;
+   color:#ffc4d9;
+  margin:0 auto 5px auto;
+   
+   
+}
+#sleep button:active,#mental-health button:active{
+    color: black;
+}
+.tiles{
+    display: flex;
+    gap:20px;
+}
+.research{
+ color: #72243e;
+}
+.tiles div{
+    
+    border-radius: 10px;
+    font-size: medium;
+     padding: 10px;
+}
+.research .list{
+    border-radius: 30px;
+    font-size: medium;
+     padding: 20px;
+}
+.research .divider hr{
+    margin:20px 0;
+     border: none;
+    border-top: 1px solid #e499b2;
+}
+
+.tiles div,.research .list{
+background-color:rgb(255, 220, 240) ;
+}
+.research .list ol{
+    display: flex;
+    justify-content: space-between;
+}
+.research .heading, .research .list p{
+    font-weight: 600;
+
+}
+
+.tiles img{
+    width:40px;
+}
+.research .list button{
+width:auto;
+height:20px;
+border-radius: 5px;
+border: none;
+color:#72243e;
+background-color: rgb(194, 249, 194);
+text-align: center;
+padding: 3px 10px;
+}
+.research .list span{
+    margin-right: 4px;
+}
+.about-us{
+    background-image: url(images/about-us.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-size: small;
+    text-align: center;
+    padding: 150px 180px 180px 180px;
+    color:#72243e
+}
+.about-us #heading{
+    font-weight: bold;
+}
